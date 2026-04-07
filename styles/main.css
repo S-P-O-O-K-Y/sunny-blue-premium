@@ -11,8 +11,9 @@
     --primary: #0EA5E9; /* Vivid Sky Blue */
     --primary-hover: #0284C7;
     --primary-text: #FFFFFF;
-    --accent: #2563EB; /* Premium Blue Accent */
-    --accent-glow: rgba(14, 165, 233, 0.2);
+    --accent: #F97316; /* Clean Florida Orange */
+    --accent-secondary: #F59E0B; /* Golden Yellow */
+    --accent-glow: rgba(245, 158, 11, 0.2);
     
     --border-color: rgba(15, 23, 42, 0.08); /* Dark border with low opacity */
     --border-hover: rgba(15, 23, 42, 0.15);
@@ -89,7 +90,7 @@ img {
 .text-gold { color: #F59E0B; }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -383,7 +384,7 @@ img {
     left: 50%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     z-index: -1;
     filter: blur(60px);
@@ -502,7 +503,7 @@ img {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
     z-index: 0;
 }
 
@@ -531,13 +532,13 @@ img {
 .feature-icon {
     width: 48px;
     height: 48px;
-    background: rgba(14, 165, 233, 0.1);
+    background: var(--accent-glow);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent-secondary);
     margin-bottom: 24px;
 }
 
@@ -586,9 +587,9 @@ img {
 }
 
 .step:hover .step-number {
-    border-color: var(--primary);
-    color: var(--primary);
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+    box-shadow: var(--shadow-glow);
     background: white;
 }
 
